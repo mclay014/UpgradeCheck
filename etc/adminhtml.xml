@@ -1,0 +1,15 @@
+<config>
+    <menu>
+        <Mclay translate="title" module="Mclay_Upgradecheck">
+            <title>Upgrade Check</title>
+            <sort_order>1</sort_order>
+            <children>
+                <upgradecheck module="Mclay_Upgradecheck">
+                    <title>Upgrade Check</title>
+                    <sort_order>1</sort_order>
+                    <action>adminhtml/Upgradecheck/index</action>
+                </upgradecheck>
+            </children>
+        </Mclay>
+    </menu>
+</config>

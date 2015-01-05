@@ -1,0 +1,59 @@
+<config>  
+  
+    <modules>
+        <Mclay_Upgradecheck>
+            <version>0.1.0</version>
+        </Mclay_Upgradecheck>
+    </modules>
+	
+	<global>
+		<models>
+			<upgradecheck>
+				<class>Mclay_Upgradecheck_Model</class>
+				<resourceModel>upgradecheck_mysql4</resourceModel>
+			</upgradecheck>   
+			<upgradecheck_mysql4>
+				<class>Mclay_Upgradecheck_Model_Mysql4</class>
+				<entities>
+					<cachecheck>
+						<table>core_cache_option</table>
+					</cachecheck>
+				</entities>         
+			</upgradecheck_mysql4>
+		</models>
+        <helpers>
+            <Mclay_Upgradecheck>
+                <class>Mclay_Upgradecheck_Helper</class>
+            </Mclay_Upgradecheck>
+        </helpers>
+		<blocks>
+			<upgradecheck>
+				<class>Mclay_Upgradecheck_Block</class>
+			</upgradecheck>
+		</blocks>
+	</global>
+	
+	<admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Mclay_Upgradecheck after="Mage_Adminhtml">Mclay_Upgradecheck_Adminhtml</Mclay_Upgradecheck>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+	
+	<adminhtml>
+		<layout>
+			<updates>
+				<upgradecheck>
+					<file>upgradecheck.xml</file>
+				</upgradecheck>
+			</updates>
+		</layout>
+	</adminhtml>
+
+	
+</config>
