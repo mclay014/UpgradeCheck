@@ -6,6 +6,7 @@ class Mclay_Upgradecheck_Adminhtml_UpgradecheckController extends Mage_Adminhtml
        $this->loadLayout();
 	   $this->_title($this->__('Check For Upgrade'));
 	   $this->renderLayout();
+	   //echo $this->getFullActionName();
     }
 }
 
